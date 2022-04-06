@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+  .login--form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+
+  .login--input {
+    margin-bottom: 0.5rem;
+    border-radius: 2rem;
+    border: none;
+    height: 2rem;
+    font-size: 1em;
+    padding: 1.5rem;
+    width: 60%;
+  }
+
+  .login--input::placeholder {
+    color: #283159;
+  }
+
+  .login--submit {
+    margin-bottom: 0.5rem;
+    border-radius: 2rem;
+    border: none;
+    height: 2rem;
+    font-size: 1em;
+    padding: 1.5rem;
+    width: 60%;
+    background-color: theme("colors.orange");
+    color: #fff;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    margin-top: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .login--submit:hover {
+    background-color: theme("colors.orange-light");
+  }
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  height: 100%;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+#root {
+  height: 100%;
+}

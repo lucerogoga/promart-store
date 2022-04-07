@@ -8,7 +8,7 @@ import formatNum from "format-num";
 import "./ProductCards.css";
 //Redux
 import { useDispatch } from "react-redux";
-import { add, remove } from "features/cart/cartSlice";
+import { remove } from "features/cart/cartSlice";
 
 const ProductCart = (props) => {
   const { productCart } = props;
@@ -43,7 +43,7 @@ const ProductCart = (props) => {
             {<Add width={15} className="productAdded--x-icon" />}
           </div>
         </div>
-        <CounterHorizontal quantity={quantity} />
+        <CounterHorizontal quantity={quantity} productCart={productCart} />
       </div>
     </div>
   );

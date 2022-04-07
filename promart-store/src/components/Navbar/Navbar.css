@@ -17,8 +17,12 @@
   .logo-container {
     display: flex;
     align-items: center;
-    background-color: theme("colors.orange-light");
+
     padding: 1rem;
     border-radius: 1rem;
+  }
+  .logo-container.active {
+    color: theme("colors.orange-light");
+    background-color: theme("colors.orange");
   }
 }

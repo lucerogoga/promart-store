@@ -4,7 +4,7 @@ import App from "components/App";
 import Login from "pages/Login";
 import Dashboard from "pages/Dashboard";
 import TakeOrder from "components/TakeOrder";
-import Cart from "components/Cart";
+import Cart from "components/MyCart/Cart";
 
 function Router() {
   return (

@@ -23,23 +23,34 @@ export const cartSlice = createSlice({
       // doesn't actually mutate the state because it uses the Immer library,
       // which detects changes to a "draft state" and produces a brand new
       // immutable state based off those changes
-      state.productsCart.push(action.payload);
+      //The findIndex() method returns the index of the first element of an array that matches the given test function. Otherwise it returns -1.
+      const existingProductIndex = state.productsCart.findIndex(
+        (item) => item.product.id === action.payload.product.id
+      );
+      //if doesnt exist we push the product
+      if (existingProductIndex === -1) {
+        state.productsCart.push(action.payload);
+      } else {
+        state.productsCart[existingProductIndex].quantity++;
+      }
     },
     //dispatch(remove(productId))
     remove: (state, action) => {
-      return state.productsCart.filter(
+      const newProductsCart = state.productsCart.filter(
         (item) => item.product.id !== action.payload
       );
+      state.productsCart = newProductsCart;
     },
     // Use the PayloadAction type to declare the contents of `action.payload`
+    // dispath(updateQuantity({productId, quantity}))
     updateQuantity: (state, action) => {
-      // {productId, quantity}
-      return state.productsCart.map((item) => {
+      const newProductsCart = state.productsCart.map((item) => {
         if (item.product.id === action.payload.productId) {
           item.quantity = action.payload.quantity;
         }
         return item;
       });
+      state.productsCart = newProductsCart;
     },
   },
 });

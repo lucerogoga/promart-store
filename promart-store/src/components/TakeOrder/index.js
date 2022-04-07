@@ -6,7 +6,7 @@ import { v4 as uuidv4 } from "uuid";
 //Components
 import iconCategories from "components/IconCategories";
 import ButtonFilter from "components/ButtonFilter";
-import ProductList from "components/ProductList";
+import ProductList from "components/Products/ProductList";
 import { ReactComponent as Trash } from "../../icons/trash.svg";
 //CustomHooks
 import { useCategories } from "features/product/hooks/useCategories";

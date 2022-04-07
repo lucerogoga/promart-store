@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
-const CounterHorizontal = () => {
+const CounterHorizontal = (props) => {
+  const { quantity } = props;
   const [count, setCount] = useState(1);
   return (
     <>
@@ -11,7 +12,7 @@ const CounterHorizontal = () => {
         >
           -
         </button>
-        <p>{count}</p>
+        <p>{quantity}</p>
         <button className="counter-button" onClick={() => setCount(count + 1)}>
           +
         </button>
@@ -19,4 +20,5 @@ const CounterHorizontal = () => {
     </>
   );
 };
+
 export default CounterHorizontal;

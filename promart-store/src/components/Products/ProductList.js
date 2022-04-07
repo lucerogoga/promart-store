@@ -4,7 +4,7 @@ import { ReactComponent as Add } from "icons/add.svg";
 //Helpers
 import formatNum from "format-num";
 //CSS
-import "./ProductList.css";
+import "./ProductCards.css";
 //Redux
 import { useDispatch } from "react-redux";
 import { add } from "features/cart/cartSlice";
@@ -12,7 +12,6 @@ import { add } from "features/cart/cartSlice";
 const ProductList = (props) => {
   const { product } = props;
   const dispatch = useDispatch();
-
   return (
     <div className="product-card">
       <div

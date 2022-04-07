@@ -1,20 +1,18 @@
 import React from "react";
 //Components
 import { ReactComponent as Add } from "icons/add.svg";
-import { CounterHorizontal } from "./CounterHorizontal";
+import CounterHorizontal from "../CounterHorizontal";
 //Helpers
 import formatNum from "format-num";
 //CSS
-import "./ProductList.css";
+import "./ProductCards.css";
 //Redux
 import { useDispatch } from "react-redux";
 import { add, remove } from "features/cart/cartSlice";
 
-const ProductCart = (cartProduct) => {
-  const {
-    product: { product },
-  } = cartProduct;
-  console.log(product);
+const ProductCart = (props) => {
+  const { productCart } = props;
+  const { product, quantity } = productCart;
   const dispatch = useDispatch();
 
   return (
@@ -29,7 +27,7 @@ const ProductCart = (cartProduct) => {
           {/* <p className="product-card--descr">{product.description}</p> */}
           <h3 className="product-card--cost">
             {"$ " +
-              formatNum(product.price, {
+              formatNum(product.price * quantity, {
                 minFraction: 2,
                 maxFraction: 2,
               })}
@@ -45,7 +43,7 @@ const ProductCart = (cartProduct) => {
             {<Add width={15} className="productAdded--x-icon" />}
           </div>
         </div>
-        <CounterHorizontal />
+        <CounterHorizontal quantity={quantity} />
       </div>
     </div>
   );

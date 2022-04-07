@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Outlet } from "react-router-dom";
 import "./Dashboard.css";
-import Navbar from "../../components/Navbar";
+import Navbar from "../../components/Navbar/Navbar";
+
 function Dashboard() {
   return (
     <>

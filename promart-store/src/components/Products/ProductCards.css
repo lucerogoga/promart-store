@@ -63,11 +63,6 @@
     transition: 0.3s;
   }
   /* Classe for Product in CART */
-  .title-cart {
-    color: theme("colors.orange");
-    font-weight: bold;
-    text-align: center;
-  }
   .image-content--product-cart {
     background-position: center;
     background-repeat: no-repeat;

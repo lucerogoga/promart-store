@@ -3,15 +3,23 @@ import React, { useState } from "react";
 import "./Login.css";
 //Router
 import { useNavigate, Navigate } from "react-router-dom";
-
+import { login, saveToken } from "../../services/apiServices";
 function Login() {
-  const [loginEmail, setLoginEmail] = useState("");
+  const [loginUser, setLoginUser] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
   const navigate = useNavigate();
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     //guardamos el token
+    // const token = await login(loginUser, loginPassword);
+    // console.log(token);
+    // saveToken(token);
+    navigate("/dashboard");
   };
+
+  if (localStorage.getItem("token")) {
+    return <Navigate to="/dashboard" />;
+  }
 
   return (
     <>
@@ -21,7 +29,7 @@ function Login() {
             id="email"
             className="login--input"
             placeholder="User email"
-            onChange={(ev) => setLoginEmail(ev.target.value)}
+            onChange={(ev) => setLoginUser(ev.target.value)}
           ></input>
           <input
             id="password"

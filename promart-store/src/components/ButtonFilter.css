@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+  .categories-container {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    margin-bottom: 1rem;
+  }
+  .button-card--content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .button-card {
+    filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.2));
+    border-radius: 10px;
+    border: none;
+    margin: 1rem;
+    /* padding: 2rem; */
+    background-color: #fff;
+    color: theme("colors.gray");
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-width: 9rem;
+    min-height: 140px;
+    cursor: pointer;
+  }
+  .button-card:hover path {
+    fill: #fff;
+  }
+
+  .button-card:hover circle {
+    fill: #fff;
+  }
+  .button-card:hover {
+    background-color: theme("colors.orange");
+    color: #fff;
+  }
+
+  .button-card:hover h2 {
+    color: #ff9aa3;
+  }
+
+  .button-card:focus,
+  .button-card:active,
+  .button-card.active {
+    background-color: theme("colors.orange");
+    color: #fff;
+  }
+
+  .button-card:focus svg,
+  .button-card:active svg,
+  .button-card.active svg {
+    color: currentColor;
+  }
+
+  .button-card--text-content {
+    height: 20px;
+  }
+}

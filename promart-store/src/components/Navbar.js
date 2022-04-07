@@ -10,7 +10,7 @@ export const Navbar = ({}) => {
         <Link to={"/dashboard"} className="logo-container">
           <AiFillHome /> <p>Home</p>
         </Link>
-        <Link to={"/cart"} className="logo-container">
+        <Link to={"cart"} className="logo-container">
           <BsFillCartFill /> <p>Cart</p>
         </Link>
       </div>

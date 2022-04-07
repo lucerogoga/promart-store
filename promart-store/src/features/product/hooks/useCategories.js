@@ -7,10 +7,8 @@ export function useCategories() {
     getCategories()
       .then((res) => res.json())
       .then((json) => {
-        // console.log(json);
         setCategories(json);
       });
-    //.then((category) => setCategories(category));
   }, []);
 
   return categories;

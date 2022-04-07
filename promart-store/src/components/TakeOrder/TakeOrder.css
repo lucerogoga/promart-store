@@ -1,5 +1,43 @@
-.products-container {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+  .products-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .title-customer {
+    color: theme("colors.orange");
+    font-weight: 800;
+  }
+  .sub-title-customer {
+    color: theme("colors.gray");
+  }
+  .clean-filter-container {
+    display: flex;
+    justify-content: flex-end;
+    margin: 1rem 0;
+  }
+  .trash-button {
+    background-color: theme("colors.gray");
+    height: 30px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #8492a6;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .trash-button:hover {
+    background-color: theme("colors.orange");
+  }
+
+  .trash-button__icon {
+    width: 30px;
+  }
 }

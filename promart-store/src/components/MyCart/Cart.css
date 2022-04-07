@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+  .header-cart-container {
+    display: flex;
+    color: theme("colors.orange");
+    margin: 1rem 0;
+    align-items: center;
+  }
+  .title-cart {
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+  }
+  .total-cost__container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-top: 0.5rem;
+    background-color: #fdf0e7;
+    background-color: theme("colors.orange-light");
+  }
+  .total-price__price {
+    font-weight: bold;
+    color: theme("colors.orange");
+  }
+}

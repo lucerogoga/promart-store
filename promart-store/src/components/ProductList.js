@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 //Components
 import { ReactComponent as Add } from "icons/add.svg";
 //Helpers
 import formatNum from "format-num";
 //CSS
-import "./ProductCard.css";
+import "./ProductList.css";
 //Redux
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { add } from "features/cart/cartSlice";
 
-const ProductCard = (props) => {
+const ProductList = (props) => {
   const { product } = props;
   const dispatch = useDispatch();
 
@@ -44,4 +44,4 @@ const ProductCard = (props) => {
   );
 };
 
-export default ProductCard;
+export default ProductList;

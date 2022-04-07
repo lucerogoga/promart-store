@@ -1,19 +1,27 @@
 import React, { useState } from "react";
+//Redux
+import { useDispatch } from "react-redux";
+import { add, removeOne } from "features/cart/cartSlice";
 
 const CounterHorizontal = (props) => {
-  const { quantity } = props;
-  const [count, setCount] = useState(1);
+  const { quantity, productCart } = props;
+  const dispatch = useDispatch();
   return (
     <>
       <div className="counter-content">
         <button
-          className="counter-button"
-          onClick={() => (count <= 1 ? setCount(1) : setCount(count - 1))}
+          className={
+            quantity === 1 ? "counter-button disable" : "counter-button"
+          }
+          onClick={() => dispatch(removeOne(productCart))}
         >
           -
         </button>
         <p>{quantity}</p>
-        <button className="counter-button" onClick={() => setCount(count + 1)}>
+        <button
+          className="counter-button"
+          onClick={() => dispatch(add(productCart))}
+        >
           +
         </button>
       </div>

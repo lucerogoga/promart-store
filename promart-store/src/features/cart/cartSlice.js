@@ -34,6 +34,18 @@ export const cartSlice = createSlice({
         state.productsCart[existingProductIndex].quantity++;
       }
     },
+    removeOne: (state, action) => {
+      const existingProductIndex = state.productsCart.findIndex(
+        (item) => item.product.id === action.payload.product.id
+      );
+      if (existingProductIndex !== -1) {
+        state.productsCart[existingProductIndex].quantity--;
+        console.log(state.productsCart[existingProductIndex].quantity);
+      }
+      if (state.productsCart[existingProductIndex].quantity === 0) {
+        console.log("remove from cart");
+      }
+    },
     //dispatch(remove(productId))
     remove: (state, action) => {
       const newProductsCart = state.productsCart.filter(
@@ -55,7 +67,7 @@ export const cartSlice = createSlice({
   },
 });
 
-export const { add, remove, updateQuantity } = cartSlice.actions;
+export const { add, remove, removeOne, updateQuantity } = cartSlice.actions;
 
 export const selectProducts = (state) => state.cart.productsCart;
 

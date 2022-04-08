@@ -9,7 +9,7 @@
 
 1. Install firebase-cli
 2. Run `firebase login` and pick `promart-store` project
-3. Run `npm deploy`
+3. Run `npm run deploy`
 
 ## Live Demo
 

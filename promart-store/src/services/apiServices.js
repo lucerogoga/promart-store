@@ -2,13 +2,15 @@ export function saveToken(token) {
   localStorage.setItem("token", token);
 }
 
-export const login = (userName, password) => {
+export const login = (username, password) => {
   return fetch("https://fakestoreapi.com/auth/login", {
-    // mode: "no-cors",
+    mode: "no-cors",
     method: "POST",
     body: JSON.stringify({
-      username: "johnd",
-      password: "m38rmF$",
+      // username: "johnd",
+      // password: "m38rmF$",
+      username,
+      password,
     }),
   })
     .then((res) => res.json())

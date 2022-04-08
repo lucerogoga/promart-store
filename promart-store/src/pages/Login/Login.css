@@ -2,14 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 @layer components {
-  .login--form {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    width: 100%;
-  }
-
   .login--input {
     margin-bottom: 0.5rem;
     border-radius: 2rem;

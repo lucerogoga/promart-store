@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 //CSS
 import "./Login.css";
+import { LoginForm } from "./ui";
 import logo from "../../icons/logo.png";
 //Router
 import { useNavigate, Navigate } from "react-router-dom";
 import { login, saveToken } from "../../services/apiServices";
+
 function Login() {
   const [loginUser, setLoginUser] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
@@ -12,8 +14,8 @@ function Login() {
 
   const handleSubmit = async () => {
     //guardamos el token
-    // const token = await login(loginUser, loginPassword);
-    // console.log(token);
+    const token = await login(loginUser, loginPassword);
+    console.log(token);
     // saveToken(token);
     navigate("/dashboard");
   };
@@ -26,7 +28,7 @@ function Login() {
     <>
       <div className="flex flex-col sm:bg-white rounded-lg p-2 m-6 shadow-xl  lg:bg-white">
         <img alt="logoPromart" className="mx-auto h-15 w-auto" src={logo} />
-        <div className="login--form self-center">
+        <LoginForm>
           <input
             id="email"
             className="login--input"
@@ -47,7 +49,7 @@ function Login() {
           >
             Login
           </button>
-        </div>
+        </LoginForm>
       </div>
     </>
   );

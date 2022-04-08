@@ -14,8 +14,8 @@ function Login() {
 
   const handleSubmit = async () => {
     //guardamos el token
-    const token = await login(loginUser, loginPassword);
-    console.log(token);
+    // const token = await login(loginUser, loginPassword);
+    // console.log(token);
     // saveToken(token);
     navigate("/dashboard");
   };

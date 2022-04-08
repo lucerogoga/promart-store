@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 //Css
 import "./Cart.css";
@@ -14,8 +14,6 @@ import ProductCart from "components/Products/ProductCart";
 
 function Cart() {
   const cart = useSelector(selectProducts);
-  const { product, quantity } = cart;
-  console.log(cart);
   //-------------------------------Sum of costs of all products
   const itemsPrice = cart.reduce(
     (a, b) => a + Number(b.product.price * b.quantity),

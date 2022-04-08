@@ -1,7 +1,6 @@
 import React from "react";
 //Components
 import { ReactComponent as Add } from "icons/add.svg";
-import CounterHorizontal from "../CounterHorizontal";
 //Helpers
 import formatNum from "format-num";
 //CSS

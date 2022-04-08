@@ -5,11 +5,19 @@ import { LoginForm } from "./ui";
 import logo from "../../icons/logo.png";
 //Router
 import { useNavigate, Navigate } from "react-router-dom";
-import { login, saveToken } from "../../services/apiServices";
+// import { login, saveToken } from "../../services/apiServices";
 
 function Login() {
-  const [loginUser, setLoginUser] = useState("");
-  const [loginPassword, setLoginPassword] = useState("");
+  const [
+    ,
+    // loginUser,
+    setLoginUser,
+  ] = useState("");
+  const [
+    ,
+    // loginPassword,
+    setLoginPassword,
+  ] = useState("");
   const navigate = useNavigate();
 
   const handleSubmit = async () => {

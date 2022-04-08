@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 //Redux
 import { useDispatch } from "react-redux";
 import { add, removeOne } from "features/cart/cartSlice";

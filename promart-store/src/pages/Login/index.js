@@ -24,7 +24,7 @@ function Login() {
 
   return (
     <>
-      <div className="flex flex-col sm:bg-white rounded-lg p-2 m-6 shadow-xl  lg:bg-orange">
+      <div className="flex flex-col sm:bg-white rounded-lg p-2 m-6 shadow-xl  lg:bg-white">
         <img alt="logoPromart" className="mx-auto h-15 w-auto" src={logo} />
         <div className="login--form self-center">
           <input
